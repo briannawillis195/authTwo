@@ -1,0 +1,82 @@
+*{
+  font-family: Poppins;
+}
+
+h1, h2, h3{
+  font-family: Poppins;
+}
+
+body{
+  padding-top: 80px;
+  word-wrap:break-word;
+  background-color: plum; 
+  /* background-image: url('https://i.postimg.cc/Y2vrG9xH/Colorful-Illustration-Dreamy-Desktop-Wallpaper.png');
+  background-size: cover; */
+}
+img{
+  height: 200px;
+}
+
+.purple{
+  background-color:pink;
+}
+
+li{
+  list-style: none;
+  background-color:white;
+  border: 1px solid black;
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+.jumbotron{
+  background-color: pink;
+}
+
+input{
+  width: 300px;
+}
+
+.foodButton, .bathButton, .nurtureButton{
+  background-color: transparent;
+  border-radius: 30px;
+  border:1px solid black;
+}
+
+.messages{
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+.input{
+  text-align:center;
+  margin-top: 30px;
+
+}
+
+h1{
+  font-family: Poppins;
+}
+
+h4{
+  text-align:center;
+  font-family: Poppins;
+}
+
+img{
+  height: 100px;
+  width:100px;
+}
+
+.food{
+  margin-left: 70px;
+}
+
+.bath, .nurture{
+  margin-left: 10px;
+}
+
+.nurture{
+  margin-right: 70px;
+}

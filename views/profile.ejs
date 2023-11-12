@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <title>Tomagatchi Fun</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1>Tomagatchi Fun <i class="fa fa-smile-o" aria-hidden="true"></i></h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+
+        <!-- LOCAL INFORMATION -->
+        <!-- <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+            </div>
+        </div> -->
+        <div class="img text-center">
+        <h4>Take care of your Tomagatchi! Name them and get their Food, Bath and Nurture to 100</h4>
+          <img src="img/one.gif">
+          <img src="img/one.gif">
+          <img src="img/one.gif">
+          <img src="img/one.gif">
+          <img src="img/one.gif">
+        </div>
+          <section class="profilePage">
+        <div class="messages text-center">
+          <ul class="messages">
+          <% for(var i=0; i<messages.length; i++) {%>
+            <li class="message <%=messages[i].food + messages[i].bath + messages[i].nurture === 300 ? 'purple' : ''%>">
+              <span><%= messages[i].name %></span>
+              <span class="food"><%= messages[i].food %></span>
+              <span class="bath"><%= messages[i].bath %></span>
+              <span class="nurture"><%= messages[i].nurture %></span>
+              <button class="foodButton">Food</button>
+              <button class="bathButton">Bath</button>
+              <button class="nurtureButton">Nurture</button>
+              <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+            </li>
+          <% } %>
+          </ul>
+        <% if (user.local.email) { %>
+          <form action="/messages" method="POST">
+            <input type="text" placeholder="name" name="name">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <% } %>
+
+</section>
+
+<script src="main.js"></script>
+
+</body>
+</html>
